@@ -1,52 +1,53 @@
 <x-app-layout>
-
-    <!-- Aqui ficaria o seu navbar -->
-    
-    <div class="content-wrapper">
-        <h2 class="mt-3 text-center">Bem vindo ao sistema Central de Vagas!</h2>
-
-        <div class="d-flex justify-content-center">
-            <div id="piechart" style="width: 900px; height: 500px;"></div>
-        </div>
-    </div>
-
-</x-app-layout>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <style>
-        body {
+         body {
+            margin: 0; /* Remove margens */
+            padding: 0; /* Remove padding */
             background: url("{{ asset('guri.png') }}") no-repeat center center fixed;
             background-size: cover;
-            position: relative;
+            min-height: 100vh; /* Garante que o body ocupe no mínimo 100% da tela */
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Centraliza o conteúdo, mas não afeta o navbar */
+
+        /* Garante que o navbar tenha sua posição correta */
+        .navbar {
+            position: relative;
+            z-index: 2;
+            /* Garante que o navbar esteja acima da imagem */
+        }
+
+        /* Centraliza o conteúdo, descontando a altura do navbar */
         .content-wrapper {
+            flex: 1; /* Ocupar o espaço restante */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: calc(100vh - 100px); /* Altura total da página menos a altura do navbar */
+            text-align: center;
+            color: blue;
+            padding-top: 100px;
         }
 
         /* Sobreposição de opacidade */
         body::before {
             content: "";
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.5);
-            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: -1;
         }
     </style>
-</head>
+    
 
-</html>
+    <!-- Aqui ficaria o seu navbar -->
+
+    <div class="content-wrapper">
+        <h2 class="text-center">Bem vindo ao Sistema Central de Vagas!</h2>  
+    </div>
+
+</x-app-layout>

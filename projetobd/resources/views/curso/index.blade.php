@@ -17,6 +17,14 @@
         .content {
             position: relative; /* Para garantir que o conteúdo fique acima da imagem */
             z-index: 1; /* Z-index maior que o da imagem de fundo */
+            color:blue;
+        }
+        .navbar {
+            position: relative; /* Garante que o navbar esteja acima da imagem */
+            z-index: 2; /* Z-index maior que o da imagem de fundo */
+        }
+        .table {
+            color: blue;
         }
     </style>
 
@@ -25,7 +33,7 @@
     <div class="content">
         <h5 class="mt-3">Gerenciar Cursos</h5>
 
-        <a class="btn btn-success" href="/curso/create">
+        <a class="btn btn-outline-primary" href="/curso/create">
             Inserir novo Curso
         </a>
 
@@ -47,8 +55,8 @@
                         <td>{{ $c->dia }}</td>
                         <td>{{ $c->periodo }}</td>
                         <td>
-                            <a href="/curso/{{ $c->id }}/edit" class="btn btn-warning">Alterar</a>
-                            <a href="/curso/{{ $c->id }}" class="btn btn-danger">Excluir</a>
+                            <a href="/curso/{{ $c->id }}/edit" class="btn btn-outline-warning">Alterar</a>
+                            <a href="/curso/{{ $c->id }}" class="btn btn-outline-danger">Excluir</a>
                         </td>
                     </tr>
                 @endforeach

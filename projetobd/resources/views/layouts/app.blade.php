@@ -19,7 +19,12 @@
         .content {
             flex: 1;
         }
-
+        .container-fluid a{
+            color: blue;
+        }
+        .container p{
+            color: blue;
+        }
         footer {
             background-color: #f8f9fa;
             color: #333;
