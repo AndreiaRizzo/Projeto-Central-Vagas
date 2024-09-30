@@ -1,11 +1,18 @@
+<style> 
+    .container{
+        color: blue;
+    }
+</style>
+
+
 <section class="my-5">
     <div class="container">
         <!-- Header Section -->
         <header>
-            <h2 class="text-lg fw-medium text-dark">
+            <h2 class="text-lg fw-medium text-blue">
                 Informações do Perfil
             </h2>
-            <p class="mt-1 text-sm text-muted">
+            <p class="mt-1  text-blue">
                 Atualize as informações do perfil da sua conta e endereço de e-mail.
             </p>
         </header>
@@ -49,7 +56,7 @@
 
             <!-- Botão Salvar -->
             <div class="d-flex justify-content-between align-items-center">
-                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button type="submit" class="btn btn-outline-primary">Salvar</button>
 
                 @if (session('status') === 'profile-updated')
                 <p class="text-success mt-3" id="profile-updated" style="display: none;">

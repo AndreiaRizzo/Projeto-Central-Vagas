@@ -21,8 +21,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.5);
-            /* Branco semi-transparente */
+            background-color: rgba(255, 255, 255, 0.6);
+            
             z-index: 1;
         }
 
@@ -30,12 +30,16 @@
         .container {
             position: relative;
             z-index: 2;
-            /* Garantir que o conteúdo apareça acima da sobreposição */
+
         }
 
         .card {
             border-radius: 1rem;
-            /* Borda arredondada para o card */
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            width: 60%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .card-body {
@@ -46,38 +50,38 @@
         .btn {
             width: 100%;
             /* Botões ocupam a largura total do card */
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.9rem;
             /* Espaçamento entre botões */
         }
 
         .card-title {
             margin-bottom: 1.5rem;
-            /* Espaçamento abaixo do título do card */
+            color: blue;
         }
     </style>
 </head>
 
 <body>
-    
+
     <div class="container d-flex justify-content-center align-items-center vh-100">
-        <div class="col-md-4">
-            <div class="card shadow-lg">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Central de vagas</h5>
-                    @auth
-                        <a href="/dashboard" class="btn btn-primary">
-                            Acessar área restrita
-                        </a>
-                    @else
-                        <a href="/login" class="btn btn-primary">
-                            Acessar o sistema
-                        </a>
-                        <a href="/register" class="btn btn-primary">
-                            Crie sua conta
-                        </a>
-                    @endauth
-                </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title text-center">Central de vagas</h3>
+                @auth
+                    <a href="/dashboard" class="btn btn-outline-primary">
+                        Acessar área restrita
+                    </a>
+                @else
+                    <a href="/login" class="btn btn-outline-primary">
+                        Acessar o sistema
+                    </a>
+                    <a href="/register" class="btn btn-outline-primary">
+                        Crie sua conta
+                    </a>
+                @endauth
             </div>
+
         </div>
     </div>
 
