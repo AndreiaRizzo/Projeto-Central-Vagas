@@ -40,7 +40,7 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>ID Curso</th>
+                    <th>Código do Curso</th>
                     <th>Nome</th>
                     <th>Dia</th>
                     <th>Período</th>
@@ -50,7 +50,7 @@
             <tbody>
                 @foreach ($cursos as $c)
                     <tr>
-                        <td>{{ $c->idcurso }}</td>
+                        <td>{{ $c->codcurso }}</td>
                         <td>{{ $c->nome }}</td>
                         <td>{{ $c->dia }}</td>
                         <td>{{ $c->periodo }}</td>

@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cursos', function (Blueprint $table) {
-            $table->id('idcurso');  // idcurso como primary key
+            $table->id();  // idcurso como primary key
+            $table->integer('codcurso');
             $table->string('nome');
             $table->string('dia');
             $table->string('periodo');

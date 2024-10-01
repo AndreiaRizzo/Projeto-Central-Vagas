@@ -48,8 +48,8 @@
 
             <div class="row mb-3">
                 <div class="col">
-                    <label for="idcurso" class="form-label">ID do Curso:</label>
-                    <input type="number" name="idcurso" class="form-control" required/>
+                    <label for="idcurso" class="form-label">Código do Curso:</label>
+                    <input type="number" name="codcurso" class="form-control" required/>
                 </div>
            
                 <div class="col">

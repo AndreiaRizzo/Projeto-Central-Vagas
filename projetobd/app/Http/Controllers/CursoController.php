@@ -30,13 +30,8 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'nome' => 'required|string|max:255',
-            'dia' => 'required|string|max:255',
-            'periodo' => 'required|string|max:255',
-        ]);
 
-        Curso::create($validated);
+        Curso::create($request->all());
 
         return redirect("/curso")->with('success', 'Curso criado com sucesso!');
     }/*o método validate garantirá que os campos sejam validados antes de criar o curso
