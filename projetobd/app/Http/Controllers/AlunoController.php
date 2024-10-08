@@ -3,18 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Curso;
-use App\Models\Cursos;
 
-class CursoController extends Controller
+class AlunoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $cursos = Curso::all(); /**pega todas as cursos e manda para o index */
-        return view("curso.index", compact('cursos'));
+        //
     }
 
     /**
@@ -22,7 +19,7 @@ class CursoController extends Controller
      */
     public function create()
     {
-        return view("curso.create");
+        //
     }
 
     /**
@@ -30,20 +27,15 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
-
-        Curso::create($request->all());
-
-        return redirect("/curso")->with('success', 'Curso criado com sucesso!');
-    }/*o método validate garantirá que os campos sejam validados antes de criar o curso
-
+        //
+    }
 
     /**
      * Display the specified resource.
      */
     public function show(string $id)
     {
-        $curso = Curso::findOrFail($id);
-        return view("curso.show", compact('curso'));
+        //
     }
 
     /**
@@ -51,8 +43,7 @@ class CursoController extends Controller
      */
     public function edit(string $id)
     {
-        $curso = Curso::findOrFail($id);
-        return view("curso.edit", compact('curso'));
+        //
     }
 
     /**
@@ -60,9 +51,7 @@ class CursoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $curso = Curso::findOrFail($id);
-        $curso->update($request->all());
-        return redirect("/curso");
+        //
     }
 
     /**
@@ -70,9 +59,6 @@ class CursoController extends Controller
      */
     public function destroy(string $id)
     {
-        $curso = Curso::findOrFail($id);
-        $curso->delete();
-        return redirect("/curso");
-
+        //
     }
 }
