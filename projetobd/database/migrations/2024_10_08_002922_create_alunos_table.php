@@ -14,13 +14,16 @@ return new class extends Migration
         Schema::create('alunos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('curso_id');
-            $table->foreign('curso_id')->references('id')
-            ->on('cursos')
-            ->onDelete("restrict");
+            $table->foreign('curso_id')
+                    ->references('id')
+                    ->on('cursos')
+                    ->onDelete("restrict");
+            $table->integer('cpfAluno');
             $table->string('nome');
-            $table->integer('codcurso');
-            $table->string('dia');
-            $table->string('periodo');
+            $table->date('dataNasc');
+            $table->integer('idade');
+            $table->string('nomeResp');
+            $table->integer('celResp');
             $table->timestamps();
         });
     }
