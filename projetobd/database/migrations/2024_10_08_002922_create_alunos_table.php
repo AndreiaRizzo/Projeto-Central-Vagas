@@ -18,12 +18,12 @@ return new class extends Migration
                     ->references('id')
                     ->on('cursos')
                     ->onDelete("restrict");
-            $table->integer('cpfAluno');
+            $table->string('cpfAluno');
             $table->string('nome');
             $table->date('dataNasc');
             $table->integer('idade');
             $table->string('nomeResp');
-            $table->integer('celResp');
+            $table->string('celResp');
             $table->timestamps();
         });
     }

@@ -10,7 +10,7 @@ class Aluno extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['cpfAluno', 'nome', 'dataNasc', 'idade', 'nomeResp' , 'celResp', 'curso'];//colocar os campos do aluno aqui
+    protected $fillable = ['cpfAluno', 'nome', 'dataNasc', 'idade', 'nomeResp' , 'celResp', 'curso_id', 'data'];//colocar os campos do aluno aqui
 
     public function curso(){
         return $this->belongsTo(Curso::class);

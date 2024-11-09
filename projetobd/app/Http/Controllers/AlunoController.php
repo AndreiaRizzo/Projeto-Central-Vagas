@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Aluno;
+use App\Models\Curso;
 
 class AlunoController extends Controller
 {
@@ -12,6 +14,8 @@ class AlunoController extends Controller
     public function index()
     {
         //
+        $alunos = Aluno::with('curso')->get();
+        return view('aluno.index', compact('alunos'));
     }
 
     /**
@@ -20,6 +24,8 @@ class AlunoController extends Controller
     public function create()
     {
         //
+        $cursos = Curso::all();
+        return view('aluno.create', compact('cursos'));
     }
 
     /**
@@ -28,6 +34,8 @@ class AlunoController extends Controller
     public function store(Request $request)
     {
         //
+        Aluno::create($request->all());
+        return redirect('/aluno');
     }
 
     /**
@@ -36,6 +44,8 @@ class AlunoController extends Controller
     public function show(string $id)
     {
         //
+        $aluno = Aluno::with('curso')->findOrFail($id);
+        return view('aluno.show', compact('aluno'));
     }
 
     /**
@@ -44,6 +54,9 @@ class AlunoController extends Controller
     public function edit(string $id)
     {
         //
+        $aluno = Aluno::with('curso')->findOrFail($id);
+        $cursos = Curso::all();
+        return view('aluno.edit', compact('aluno', 'cursos'));
     }
 
     /**
@@ -52,6 +65,9 @@ class AlunoController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $aluno = Aluno::findOrFail($id);
+        $aluno->update($request->all());
+        return redirect('/aluno');
     }
 
     /**
@@ -60,5 +76,8 @@ class AlunoController extends Controller
     public function destroy(string $id)
     {
         //
+        $aluno = Aluno::findOrFail($id);
+        $aluno->delete();
+        return redirect('/aluno');
     }
 }
