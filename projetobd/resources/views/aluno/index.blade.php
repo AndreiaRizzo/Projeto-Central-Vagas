@@ -56,12 +56,12 @@
                     <tr>
                         <td>{{ $aluno->nome }}</td>
                         <td>{{ $aluno->cpfAluno }}</td>
-                        <td>{{ $aluno->dataNasc }}</td>
+                        <td>{{ \Carbon\Carbon::parse($aluno->dataNasc)->format('d/m/Y')}}</td>
                         <td>{{ $aluno->idade }}</td>
                         <td>{{ $aluno->curso->nome }}</td>
                         <td>{{ $aluno->nomeResp }}</td>
                         <td>{{ $aluno->celResp }}</td>
-                        <td>{{ $aluno->data }}</td>
+                        <td>{{ \Carbon\Carbon::parse($aluno->data)->format('d/m/Y')}}</td>
                         <td>
                             <a href="/aluno/{{ $aluno->id }}/edit" class="btn btn-outline-warning">Alterar</a>
                             <a href="/aluno/{{ $aluno->id }}" class="btn btn-outline-danger">Excluir</a>

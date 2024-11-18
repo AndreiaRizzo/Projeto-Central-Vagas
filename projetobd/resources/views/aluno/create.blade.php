@@ -95,7 +95,7 @@
                 </div>
                 <div class="col">
                     <label for="data" class="form-label">Data do cadastro</label>
-                    <input type="text" id="data" name="data" class="form-control" required />
+                    <input type="date" id="data" name="data" class="form-control" required />
                 </div>
 
             </div>
@@ -178,7 +178,7 @@
             const year = today.getFullYear();
 
             // Formato brasileiro: DD-MM-YYYY
-            const formattedDate = `${day}-${month}-${year}`;
+            const formattedDate = `${year}-${month}-${day}`;
 
             // Define o valor do campo "data" no formato brasileiro
             document.getElementById('data').value = formattedDate;
