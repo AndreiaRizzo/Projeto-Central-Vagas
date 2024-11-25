@@ -49,7 +49,10 @@
                     <a class="nav-link" href="/curso">Cursos</a>
                 </li>
                 <li class="nav-item ms-5"> <!-- Adiciona margem à esquerda -->
-                    <a class="nav-link" href="/aluno">Cadastrar aluno</a>
+                    <a class="nav-link" href="/aluno/create">Cadastrar aluno</a>
+                </li>
+                <li class="nav-item ms-5"> <!-- Adiciona margem à esquerda -->
+                    <a class="nav-link" href="/aluno">Lista de espera</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">

@@ -13,9 +13,13 @@ class CursoController extends Controller
      */
     public function index()
     {
-        $cursos = Curso::all(); /**pega todas as cursos e manda para o index */
+        // Ordena os cursos pelo nome em ordem alfabética (ascendente)
+        $cursos = Curso::orderBy('nome', 'asc')->get(); 
+    
+        // Retorna a view com os cursos ordenados
         return view("curso.index", compact('cursos'));
     }
+    
 
     /**
      * Show the form for creating a new resource.

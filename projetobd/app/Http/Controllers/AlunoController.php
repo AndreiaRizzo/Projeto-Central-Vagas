@@ -13,10 +13,18 @@ class AlunoController extends Controller
      */
     public function index()
     {
-        //
-        $alunos = Aluno::with('curso')->get();
+        // Faz o join entre as tabelas 'alunos' e 'cursos' e ordena pelos campos desejados
+        $alunos = Aluno::join('cursos', 'alunos.curso_id', '=', 'cursos.id') // Supondo que o relacionamento seja via curso_id
+            ->orderBy('cursos.nome', 'asc') // Ordena pelo nome do curso
+            ->orderBy('alunos.data', 'asc') // Ordena pela data de cadastro do aluno
+            ->select('alunos.*', 'cursos.nome as nome_curso') // Seleciona todos os campos da tabela 'alunos' e o nome do curso
+            ->get();
+
+        // Retorna a view com os alunos ordenados
         return view('aluno.index', compact('alunos'));
     }
+
+
 
     /**
      * Show the form for creating a new resource.
