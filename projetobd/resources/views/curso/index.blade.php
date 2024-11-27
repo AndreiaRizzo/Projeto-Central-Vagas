@@ -33,6 +33,20 @@
     <div class="content">
         <h5 class="mt-3">Gerenciar Cursos</h5>
 
+        @if (session('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session('error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
+        @if (session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
         <a class="btn btn-outline-primary" href="/curso/create">
             Inserir novo Curso
         </a>
@@ -51,9 +65,9 @@
                 @foreach ($cursos as $c)
                     <tr>
                         <td>{{ $c->codcurso }}</td>
-                        <td>{{ $c->nome }}</td>
-                        <td>{{ $c->dia }}</td>
-                        <td>{{ $c->periodo }}</td>
+                        <td>{{ mb_strtoupper($c->nome) }}</td>
+                        <td>{{ mb_strtoupper($c->dia) }}</td>
+                        <td>{{ mb_strtoupper($c->periodo) }}</td>
                         <td>
                             <a href="/curso/{{ $c->id }}/edit" class="btn btn-outline-warning">Alterar</a>
                             <a href="/curso/{{ $c->id }}" class="btn btn-outline-danger">Excluir</a>

@@ -84,13 +84,9 @@
                 <div class="col">
                     <label for="curso_id" class="form-label">Nome do Curso:</label>
                     <select name="curso_id" class="form-control">
-                        @foreach ($cursos as $curso)
-                            <option value="{{$curso->id}}">{{$curso->nome}}
-
-                            </option>
-
+                        @foreach ($cursos->sortBy('nome') as $curso)
+                            <option value="{{ $curso->id }}">{{mb_strtoupper(($curso->nome))  }}</option>
                         @endforeach
-
                     </select>
                 </div>
                 <div class="col">
