@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Curso;
-use App\Models\Cursos;
+
 use Exception;
 
 class CursoController extends Controller

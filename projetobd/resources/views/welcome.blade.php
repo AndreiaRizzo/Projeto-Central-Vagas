@@ -77,7 +77,7 @@
                         Acessar o sistema
                     </a>
                     <a href="/register" class="btn btn-outline-primary">
-                        Crie sua conta
+                        Criar usuário
                     </a>
                 @endauth
             </div>
