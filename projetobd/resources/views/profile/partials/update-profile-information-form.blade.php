@@ -1,7 +1,28 @@
 <style> 
     .container{
         color: blue;
+        width: 600px;
+        opacity: 0.7;
     }
+     body {
+            background: url("{{ asset('guri.png') }}") no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        z-index: -1;
+    }
+    .form-control {
+        width: 500px;
+    }
+
 </style>
 
 

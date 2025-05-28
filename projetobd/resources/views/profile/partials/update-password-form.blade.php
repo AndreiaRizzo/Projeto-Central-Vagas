@@ -2,10 +2,10 @@
     <div class="container">
         <!-- Header Section -->
         <header>
-            <h2 class="text-lg fw-medium text-dark">
+            <h2 class="text-lg fw-medium text-blue" > 
                 Atualizar Senha
             </h2>
-            <p class="mt-1 text-sm text-muted">
+            <p class="mt-1 text-sm text-blue">
                 Garanta que sua conta esteja usando uma senha longa e aleatória para permanecer segura.
             </p>
         </header>
