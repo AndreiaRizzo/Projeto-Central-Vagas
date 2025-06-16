@@ -45,9 +45,13 @@
     
 
     <!-- Aqui ficaria o seu navbar -->
+        
 
+       
     <div class="content-wrapper">
-        <h2 class="text-center">Bem vindo ao Sistema Central de Vagas!</h2>  
+        <h2 class="text-center">Bem vindo ao Sistema Central de Vagas!</h2>
+        
+        
     </div>
 
 </x-app-layout>

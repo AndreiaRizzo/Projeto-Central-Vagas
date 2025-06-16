@@ -57,6 +57,9 @@
                 <li class="nav-item ms-5"> <!-- Adiciona margem à esquerda -->
                     <a class="nav-link" href="/dashboard">Gráfico dos cursos</a>
                 </li>
+                <li class="nav-item ms-5"> <!-- Adiciona margem à esquerda -->
+                    <a class="nav-link" href="/usuarios/create">Registrar usuário</a>
+                </li>
             </ul>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item dropdown">

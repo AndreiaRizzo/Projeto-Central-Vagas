@@ -76,9 +76,7 @@
                     <a href="/login" class="btn btn-outline-primary">
                         Acessar o sistema
                     </a>
-                    <a href="/register" class="btn btn-outline-primary">
-                        Criar usuário
-                    </a>
+                    
                 @endauth
             </div>
 
